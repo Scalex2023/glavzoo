@@ -64,7 +64,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/j4fZ0wMQjt7hFVTr6vnB0Q/250r/d/professionalnyy_korm_dlya_krolikov.png'
+						src='https://st42.stpulscen.ru/images/product/466/561/418_medium2.jpg'
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
@@ -82,7 +82,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/TU2ya7aRI8sclcb6e-SgeA/250r/d/korm_dlya_sobak_krasivyy.jpg'
+						src='https://kartinki.pics/uploads/posts/2022-12/thumbs/1671781727_kartinkin-net-p-korm-dlya-koshek-kartinki-oboi-4.jpg'
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
@@ -100,7 +100,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/iuNE5Lr3tbl4JLg_Cet7Bw/250r/d/korm_granuly.jpg'
+						src='https://static.insales-cdn.com/images/products/1/807/76653351/4333.jpeg'
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
@@ -118,7 +118,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/O7GUE3FT9KgB5x4YVhUn3Q/250r/d/palochki_skleinnyye.jpg'
+						src='https://lh3.googleusercontent.com/proxy/IrG3PGyFDb0eOXkhCaHZueNzEeKPkVkYqstQUbHvlpa6S8QyaYflElmYSbBpKAq-hm3OjBU0'
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
@@ -136,7 +136,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/GpM6uPLNWk5fCgPu1DINaA/r180/d/dried-vegetables.jpg'
+						src='https://www.megamix.ru/images/vitaminy/kormovye-dobavki-dlya-selskokhozyaystvennykh-zhivotnykh-3.jpg'
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
