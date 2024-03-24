@@ -17,19 +17,19 @@ function Hero() {
 					<div className='w-full md:w-[25%] flex items-center gap-3'>
 						<img src={settings} alt='settings image' className='w-[60px]' />
 						<p className='font-semibold text-black'>
-							Собственные производственные линии
+                            Производственные мощности в России и зарубежом
 						</p>
 					</div>
 					<div className='w-full md:w-[25%] flex items-center gap-3'>
 						<img src={like} alt='like image' className='w-[60px]' />
 						<p className='font-semibold text-black'>
-							Тщательный отбор лучшего сырья
+                            Тщательный отбор партнеров
 						</p>
 					</div>
 					<div className='w-full md:w-[25%] flex items-center gap-3'>
 						<img src={current} alt='current image' className='w-[60px]' />
 						<p className='font-semibold text-black'>
-							Контроль качества на всех стадиях производства
+                            Контроль качества на каждом этапе
 						</p>
 					</div>
 				</div>

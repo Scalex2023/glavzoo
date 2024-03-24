@@ -11,7 +11,7 @@ function Form() {
 						data-aos='zoom-in-up'
 					>
 						<h1
-							className='text-[#8FCC54] text-[40px] mt-[110px] mb-[20px] font-Poppins'
+							className='text-[#8FCC54] text-center w-full font-semibold text-[40px] mt-[110px] mb-[20px] font-Poppins'
 							data-aos='fade-right'
 						>
 							Оставьте заявку

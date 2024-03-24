@@ -7,8 +7,8 @@ function Products() {
 		<div className='bg-[#8fcc54] pb-[50px]'>
 			<Wrapper>
 				<div className='flex justify-center items-center flex-col'>
-					<h1 className='text-white text-[40px] pt-[60px] pb-[40px] font-semibold'>
-						Мы предлагаем
+					<h1 className='text-white text-[40px] text-center pt-[60px] pb-[40px] font-semibold'>
+                        Мы предлагаем все существующие разновидности наполнителей
 					</h1>
 					<div className='flex justify-center items-center flex-wrap gap-[40px]'>
 						<ProductCards />
