@@ -10,6 +10,7 @@ const Adminpanel = () => {
     const [tab, setTab] = useState(1)
 
     const [isLoged, setLoged] = useState(false)
+    const [postOrPut, setPostOrPut] = useState(new Date().getTime())
 
     const [categories] = useCollection(
         collection(getFirestore(app), 'news'),
@@ -34,7 +35,7 @@ const Adminpanel = () => {
     const addAnimal = async () => {
         if (animalInp.title && animalInp.desc && animalInp.image) {
 
-            const animalsRef = doc(db, 'news', animalInp.title);
+            const animalsRef = doc(db, 'news', postOrPut);
             setAnimalsInp({
                 title: "",
                 desc: "",
@@ -42,6 +43,8 @@ const Adminpanel = () => {
             })
 
             document.getElementById('animalModal').close()
+
+            setPostOrPut(new Date().getTime())
 
             await setDoc(animalsRef, {
                 title: animalInp.title,
@@ -61,7 +64,7 @@ const Adminpanel = () => {
     const addCategory = async () => {
         if (categoryInp.name && categoryInp.image) {
 
-            const categoryRef = doc(db, 'products', categoryInp.name);
+            const categoryRef = doc(db, 'products', postOrPut);
             setCategoryInp({
                 name: "",
                 desc: "",
@@ -69,6 +72,8 @@ const Adminpanel = () => {
             })
 
             document.getElementById('categoryModal').close()
+
+            setPostOrPut(new Date().getTime())
 
             await setDoc(categoryRef, {
                 name: categoryInp.name,
@@ -107,9 +112,10 @@ const Adminpanel = () => {
                                 <thead className="2xl:table hidden w-full">
                                     <tr className="flex justify-between py-2.5">
                                         <th className="w-[50px] text-center">№</th>
-                                        <th className="w-full md:w-5/12">Название</th>
-                                        <th className="w-full md:w-5/12">Описание</th>
+                                        <th className="w-full md:w-4/12">Название</th>
+                                        <th className="w-full md:w-4/12">Описание</th>
                                         <th className="w-full md:w-3/12">Картинка</th>
+                                        <th className="w-1/12">Измениить</th>
                                         <th className="w-1/12 text-center">Удалить</th>
                                     </tr>
                                 </thead>
@@ -118,9 +124,18 @@ const Adminpanel = () => {
                                         animals?.docs.sort().map((item, index) => (
                                             <tr className="bg-[#FFFFFF] hover:bg-[#f1f1f16c] flex-col items-start xl:flex-row flex justify-between w-full py-[10px]">
                                                 <th className="w-[50px] hidden xl:block text-center">{index + 1}</th>
-                                                <td className="w-full md:w-5/12">{item.data().name}</td>
-                                                <td className="w-full md:w-5/12">{item.data().desc}</td>
+                                                <td className="w-full md:w-4/12">{item.data().name}</td>
+                                                <td className="w-full md:w-4/12">{item.data().desc}</td>
                                                 <td className="w-full md:w-3/12">{item.data().image.toString().slice(0, 36)}...</td>
+                                                <td onClick={() => {
+                                                    document.getElementById('categoryModal').showModal()
+                                                    setPostOrPut(animals?.docs.filter(i => i.id == item.id)[0].id)
+                                                    setCategoryInp({
+                                                        name: animals?.docs.filter(i => i.id == item.id)[0].data().name,
+                                                        desc: animals?.docs.filter(i => i.id == item.id)[0].data().desc,
+                                                        image: animals?.docs.filter(i => i.id == item.id)[0].data().image,
+                                                    })
+                                                }} className="w-1/12 font-semibold text-yellow-400 cursor-pointer">изменить</td>
                                                 <td onClick={() => deleteCategory(item.id)} className="w-1/12 cursor-pointer block hover:scale-105 transition-all text-red-500 text-center">x</td>
                                             </tr>
                                         ))
@@ -144,6 +159,7 @@ const Adminpanel = () => {
                                         <th className="w-full md:w-4/12">Имя</th>
                                         <th className="w-full md:w-4/12">Описание</th>
                                         <th className="w-full md:w-3/12">Картинка</th>
+                                        <th className="w-1/12">Измениить</th>
                                         <th className="w-1/12">Удалить</th>
                                     </tr>
                                 </thead>
@@ -155,42 +171,16 @@ const Adminpanel = () => {
                                                 <td className="w-full md:w-4/12">{item.data().title}</td>
                                                 <td className="w-full md:w-4/12">{item.data().desc}</td>
                                                 <td className="w-full md:w-3/12">{item.data().image.toString().slice(0, 36)}...</td>
+                                                <td onClick={() => {
+                                                    document.getElementById('animalModal').showModal()
+                                                    setPostOrPut(categories?.docs.filter(i => i.id == item.id)[0].id)
+                                                    setAnimalsInp({
+                                                        title: categories?.docs.filter(i => i.id == item.id)[0].data().title,
+                                                        desc: categories?.docs.filter(i => i.id == item.id)[0].data().desc,
+                                                        image: categories?.docs.filter(i => i.id == item.id)[0].data().image,
+                                                    })
+                                                }} className="w-1/12 font-semibold text-yellow-400 cursor-pointer">изменить</td>
                                                 <td onClick={() => deleteAnimal(item.id)} className="w-1/12 cursor-pointer block hover:scale-105 transition-all text-red-500 text-center">x</td>
-                                            </tr>
-                                        ))
-                                    }
-                                </tbody>
-                            </table>
-                        </div>
-                    }
-                    {
-                        tab == 3 
-                        &&
-                        <div className="overflow-x-auto h-screen">
-                            <div className="flex justify-between items-center my-3">
-                                <h1 className="text-2xl font-[800] text-[#5c5c5c]">Пользователи</h1>
-                            </div>
-                            <table className="shadow-admin2 table my-20 bg-[#FFFFFF] w-11/12 mx-auto">
-                                <thead className="w-full hidden 2xl:table">
-                                    <tr className="flex justify-between py-2.5">
-                                        <th className="w-[65px] text-center">№</th>
-                                        <th className="w-4/12">Email</th>
-                                        <th className="w-3/12">Пароль</th>
-                                        <th className="w-5/12">Континент</th>
-                                        <th className="w-3/12">Страна</th>
-                                        <th className="w-1/12">Удалить</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="rounded-[30px] w-full">
-                                    {
-                                        users?.docs.sort().map((item, index) => (
-                                            <tr className="bg-[#FFFFFF] hover:bg-[#f1f1f16c] flex-col items-start 2xl:flex-row flex justify-between w-full py-[10px]">
-                                                <th className="w-[65px] hidden xl:block text-center">{index + 1}</th>
-                                                <td className="w-4/12">{item.data().email}</td>
-                                                <td className="w-3/12">{item.data().password}</td>
-                                                <td className="w-5/12">{item.data().continent}</td>
-                                                <td className="w-3/12">{item.data().country}</td>
-                                                <td onClick={() => deleteUser(item.id)} className="w-1/12 cursor-pointer block hover:scale-105 transition-all text-red-500 text-center">x</td>
                                             </tr>
                                         ))
                                     }
@@ -242,7 +232,8 @@ const Adminpanel = () => {
                 <form method="dialog" className="modal-backdrop">
                     <button>close</button>
                 </form>
-            </dialog>     
+            </dialog>  
+
         </>
     )
 }

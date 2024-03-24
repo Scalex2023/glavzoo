@@ -68,6 +68,14 @@ function Form() {
 					</div>
 				</div>
 			</Wrapper>
+            <div className='flex justify-center gap-4 items-center my-5'>
+                <a href="/">
+                    <img className='w-12' src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="telegram" />
+                </a>
+                <a href="/">
+                    <img className='w-12' src="https://static-00.iconduck.com/assets.00/whatsapp-icon-2048x2048-dumosfvo.png" alt="telegram" />
+                </a>
+            </div>
 		</>
 	)
 }
