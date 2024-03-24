@@ -56,7 +56,7 @@ function Swipper() {
                             Надежный поставщик наполнителей для котов
                         </span>
                         <span className='font-normal drop-shadow-lg text-[18px] md:text-[32px]'>
-                            Производство и оптовые поставки
+                            Производство и оптовые поставки по всей России и СНГ
                         </span>
                     </h1>
                     <a href='#products'
