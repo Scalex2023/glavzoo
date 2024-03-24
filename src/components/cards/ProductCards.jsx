@@ -16,7 +16,7 @@ function ProductCards() {
         {
             products?.docs.map(i => (
                 <div
-                    className='card w-[31%] h-[480px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
+                    className='card w-[95%] md:w-[31%] h-[480px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
                     data-aos='zoom-in'
 			    >
                     <figure>

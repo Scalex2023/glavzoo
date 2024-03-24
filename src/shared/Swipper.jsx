@@ -51,7 +51,7 @@ function Swipper() {
 					className='text-3xl font-bold md:mb-4 text-center flex flex-col items-center'
 					data-aos='fade-right'
 				>
-					<span className='text-[24px] max-w-[700px] leading-none md:text-[55px] drop-shadow-lg md:mb-[20px]'>
+					<span className='text-[28px] max-w-[700px] leading-none md:text-[55px] drop-shadow-lg md:mb-[20px]'>
                         Надежный поставщик наполнителей для котов
 					</span>
 					<span className='font-normal drop-shadow-lg text-[18px] md:text-[32px]'>
@@ -59,7 +59,7 @@ function Swipper() {
 					</span>
 				</h1>
 				<button
-					className='bg-[#F65152] rounded-[500px] md:w-[250px] md:h-[55px] px-[20px] py-[8px] text-white font-bold md:text-[18px] text-[10px] mt-[10px] transition duration-75 hover:scale-90'
+					className='bg-[#F65152] rounded-[500px] md:w-[250px] md:h-[55px] px-[20px] py-[8px] text-white font-bold md:text-[18px] text-[16px] mt-[10px] transition duration-75 hover:scale-90'
 					data-aos='fade-left'
 				>
 					СДЕЛАТЬ ЗАКАЗ

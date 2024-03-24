@@ -17,7 +17,7 @@ function NewsCards() {
             {
                 news?.docs.map(i => (
                     <div
-                        className='flex justify-center h-[480px] items-center flex-col w-[280px] md:w-[350px] border text-center pb-10 rounded-[20px]'
+                        className='flex justify-center h-[480px] items-center flex-col w-[95%] md:w-[350px] border text-center pb-10 rounded-[20px]'
                         data-aos='zoom-in'
                     >
                         <img
