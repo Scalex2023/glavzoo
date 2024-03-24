@@ -64,6 +64,7 @@ const Adminpanel = () => {
             const categoryRef = doc(db, 'products', categoryInp.name);
             setCategoryInp({
                 name: "",
+                desc: "",
                 image: ""
             })
 
@@ -71,6 +72,7 @@ const Adminpanel = () => {
 
             await setDoc(categoryRef, {
                 name: categoryInp.name,
+                desc: categoryInp.desc,
                 image: categoryInp.image
             }, { merge: true });
 
@@ -105,7 +107,8 @@ const Adminpanel = () => {
                                 <thead className="2xl:table hidden w-full">
                                     <tr className="flex justify-between py-2.5">
                                         <th className="w-[50px] text-center">№</th>
-                                        <th className="w-full md:w-8/12">Название</th>
+                                        <th className="w-full md:w-5/12">Название</th>
+                                        <th className="w-full md:w-5/12">Описание</th>
                                         <th className="w-full md:w-3/12">Картинка</th>
                                         <th className="w-1/12 text-center">Удалить</th>
                                     </tr>
@@ -115,7 +118,8 @@ const Adminpanel = () => {
                                         animals?.docs.sort().map((item, index) => (
                                             <tr className="bg-[#FFFFFF] hover:bg-[#f1f1f16c] flex-col items-start xl:flex-row flex justify-between w-full py-[10px]">
                                                 <th className="w-[50px] hidden xl:block text-center">{index + 1}</th>
-                                                <td className="w-full md:w-8/12">{item.data().name}</td>
+                                                <td className="w-full md:w-5/12">{item.data().name}</td>
+                                                <td className="w-full md:w-5/12">{item.data().desc}</td>
                                                 <td className="w-full md:w-3/12">{item.data().image.toString().slice(0, 36)}...</td>
                                                 <td onClick={() => deleteCategory(item.id)} className="w-1/12 cursor-pointer block hover:scale-105 transition-all text-red-500 text-center">x</td>
                                             </tr>
@@ -211,6 +215,7 @@ const Adminpanel = () => {
                     <h3 className="font-bold text-lg">Добавить продукт.</h3>
                     <div className="w-full flex flex-col gap-2 mt-[15px]">
                         <input onChange={e => setCategoryInp(prev => ({ ...prev, name: e.target.value }))} value={categoryInp.name} type="text" placeholder="Имя" className="input input-bordered" />
+                        <input onChange={e => setCategoryInp(prev => ({ ...prev, desc: e.target.value }))} value={categoryInp.desc} type="text" placeholder="Описание" className="input input-bordered" />
                         <input onChange={e => setCategoryInp(prev => ({...prev, image: e.target.value}))} value={categoryInp.image} type="text" placeholder="Картинка URL" className="input input-bordered" />
 
                         <button onClick={addCategory} className="mt-[10px] btn bg-[#458FF6] hover:bg-[#3166AF] text-[#fff]">Добавить</button>

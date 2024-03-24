@@ -11,7 +11,7 @@ function Form() {
 						data-aos='zoom-in-up'
 					>
 						<h1
-							className='text-[#8FCC54] text-center w-full font-semibold text-[40px] mt-[110px] mb-[20px] font-Poppins'
+							className='text-[#4C67EA] text-center w-full font-semibold text-[40px] mt-[110px] mb-[20px] font-Poppins'
 							data-aos='fade-right'
 						>
 							Оставьте заявку
@@ -24,13 +24,13 @@ function Form() {
 										type='text'
 										name='firstname'
 										placeholder='Имя'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#8FCC54] font-Poppins px-[30px] py-[15px] text-[17px]'
+										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 									/>
 									<input
 										type='text'
 										name='lastname'
 										placeholder='Фамилия'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#8FCC54] font-Poppins px-[30px] py-[15px] text-[17px]'
+										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 									/>
 								</div>
 								<div className='flex items-center gap-4 flex-col md:flex-row w-full'>
@@ -38,29 +38,29 @@ function Form() {
 										type='email'
 										name='email'
 										placeholder='Email'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#8FCC54] font-Poppins px-[30px] py-[15px] text-[17px]'
+										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 									/>
 									<input
 										type='number'
 										name='password'
 										placeholder='Номер телефона'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#8FCC54] font-Poppins px-[30px] py-[15px] text-[17px]'
+										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 									/>
 								</div>
 								<input
 									type='text'
 									name='Address'
 									placeholder='Адрес'
-									className='input w-full bg-[#70869d12] rounded-[5px] text-[#8FCC54] font-Poppins px-[30px] py-[15px] text-[17px]'
+									className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 								/>
 								<textarea
 									name='message'
 									cols='30'
 									rows='10'
 									placeholder='Информация'
-									className='w-full bg-[#70869d12] textarea rounded-[5px] text-[#8FCC54] font-Poppins px-[30px] py-[15px] text-[17px]'
+									className='w-full bg-[#70869d12] textarea rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 								></textarea>
-								<button className='bg-[#8FCC54] text-white px-[55px] py-[15px] rounded-[500px] transition duration-75 ease-in hover:scale-90 mt-[10px] font-Poppins'>
+								<button className='bg-[#4C67EA] text-white px-[55px] py-[15px] rounded-[500px] transition duration-75 ease-in hover:scale-90 mt-[10px] font-Poppins'>
 									Отправить
 								</button>
 							</div>

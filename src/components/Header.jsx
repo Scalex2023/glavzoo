@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.png'
 import phone from '../assets/phone.png'
-import email from '../assets/email.png'
+import  email from '../assets/email.png'
 import Wrapper from '../layout/Wrapper'
 import close from '../assets/x.svg'
 

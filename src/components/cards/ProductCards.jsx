@@ -27,11 +27,14 @@ function ProductCards() {
                         />
                     </figure>
                     <div className='card-body'>
-                        <h2 className='card-title text-center text-[16px] text-[#525252]'>
+                        <h2 className='font-semibold text-center text-[18px] text-[#525252]'>
                             {i.data().name}
                         </h2>
+                        <h2 className='text-center mt-2 text-[16px] text-[#525252]'>
+                            {i.data().desc}
+                        </h2>
                     </div>
-                    <button className='mb-5 flex justify-center mx-auto max-w-[250px] px-[45px] rounded-3xl text-white py-[10px] bg-[#8FCC54]'>Подробнее</button>
+                    <button className='mb-5 flex justify-center mx-auto max-w-[250px] px-[45px] rounded-3xl text-white py-[10px] bg-[#4C67EA]'>Подробнее</button>
 			    </div>
             ))
         }

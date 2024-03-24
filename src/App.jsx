@@ -11,27 +11,27 @@ import { Route, Routes } from 'react-router-dom'
 import Adminpanel from './components/adminpanel'
 
 function App() {
-    
-	useEffect(() => {
-		Aos.init({})
-	}, [])
 
-	return (
-		<div>
+    useEffect(() => {
+        Aos.init({})
+    }, [])
+    
+    return (
+        <div>
             <Routes>
                 <Route path='/' element={<div>
                     <Header />
                     <Hero />
                     <Products />
                     <News />
-                    <Tovar />
+                    {/* <Tovar /> */}
                     <Form />
                     <Footer />
                 </div>} />
-                <Route path='/adminpanelglavzooo' element={<Adminpanel/>} />
+                <Route path='/adminpanelglavzooo' element={<Adminpanel />} />
             </Routes>
         </div>
-	)
+    )
 }
 
 export default App

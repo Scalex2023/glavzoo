@@ -4,7 +4,7 @@ import ProductCards from './cards/ProductCards'
 
 function Products() {
 	return (
-		<div id='products' className='bg-[#8fcc54] pb-[50px]'>
+		<div id='products' className='bg-[#4C67EA] pb-[50px]'>
 			<Wrapper>
 				<div className='flex justify-center items-center flex-col'>
 					<h1 className='text-white text-[24px] md:text-[40px] text-center pt-[60px] pb-[40px] font-semibold'>
