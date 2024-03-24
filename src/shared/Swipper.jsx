@@ -58,12 +58,12 @@ function Swipper() {
                         Производство и оптовые поставки
 					</span>
 				</h1>
-				<button
-					className='bg-[#F65152] rounded-[500px] md:w-[250px] md:h-[55px] px-[20px] py-[8px] text-white font-bold md:text-[18px] text-[16px] mt-[10px] transition duration-75 hover:scale-90'
+				<a href='#products'
+					className='bg-[#F65152] flex justify-center items-center rounded-[500px] md:w-[250px] md:h-[55px] px-[20px] py-[8px] text-white font-bold md:text-[18px] text-[16px] mt-[10px] transition duration-75 hover:scale-90'
 					data-aos='fade-left'
 				>
 					СДЕЛАТЬ ЗАКАЗ
-				</button>
+				</a>
 			</div>
 		</div>
 	)

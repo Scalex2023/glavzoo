@@ -5,7 +5,7 @@ import tovar from '../assets/tovar.jpg'
 function Tovar() {
 	return (
 		<Wrapper>
-			<div className='flex justify-center items-start flex-col mt-[150px]'>
+			<div id='about' className='flex justify-center items-start flex-col mt-[150px]'>
 				<h1
 					className='text-3xl lg:text-5xl font-semibold text-center mb-8'
 					data-aos='fade-right'

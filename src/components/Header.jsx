@@ -21,22 +21,22 @@ function Header() {
                     </a>
 					<ul className='md:flex items-center gap-[30px] hidden'>
 						<li>
-							<a href='#'>Главная</a>
+							<a href='/'>Главная</a>
 						</li>
 						<li>
-							<a href='#'>О нас</a>
+							<a href='#about'>О нас</a>
 						</li>
 						<li>
-							<a href='#'>Виды продукции</a>
+							<a href='#products'>Виды продукции</a>
 						</li>
 						<li>
-							<a href='#'>С чего начать</a>
+							<a href='#about'>С чего начать</a>
 						</li>
 						<li>
-							<a href='#'>Питомникам</a>
+							<a href='#about'>Питомникам</a>
 						</li>
 						<li>
-							<a href='#'>Контакты</a>
+							<a href='#contacts'>Контакты</a>
 						</li>
 					</ul>
 					<form className='md:flex items-center gap-[22px] hidden'>
@@ -70,22 +70,22 @@ function Header() {
 						<div className='p-8'>
 							<ul className='flex flex-col gap-[25px]'>
 								<li>
-									<a href='#'>Главная</a>
+									<a href='/'>Главная</a>
 								</li>
 								<li>
-									<a href='#'>О нас</a>
+									<a href='#about'>О нас</a>
 								</li>
 								<li>
-									<a href='#'>Виды продукции</a>
+									<a href='#products'>Виды продукции</a>
 								</li>
 								<li>
-									<a href='#'>С чего начать</a>
+									<a href='#about'>С чего начать</a>
 								</li>
 								<li>
-									<a href='#'>Питомникам</a>
+									<a href='#about'>Питомникам</a>
 								</li>
 								<li>
-									<a href='#'>Контакты</a>
+									<a href='#contacts'>Контакты</a>
 								</li>
 							</ul>
                             <form className='md:flex mt-8 items-center gap-[22px]'>

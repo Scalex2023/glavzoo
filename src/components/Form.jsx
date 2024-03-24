@@ -5,7 +5,7 @@ function Form() {
 	return (
 		<>
 			<Wrapper>
-				<div className='flex flex-col justify-center items-center'>
+				<div id='contacts' className='flex flex-col justify-center items-center'>
 					<div
 						className='flex flex-col items-start px-[20px] md:px-0'
 						data-aos='zoom-in-up'
