@@ -33,7 +33,7 @@ function Swipper() {
 				</div>
 				<div>
 					<img
-						src={"https://images.prom.ua/3890392217_w640_h640_drevesnyj-napolnitel-dlya.jpg"}
+						src={"https://animal.kg/image/cache/catalog/products/1/3-700x700.jpg"}
 						className='w-full h-96 lg:max-h-[80vh] lg:h-auto object-cover'
 						alt='slider3'
 					/>
