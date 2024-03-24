@@ -10,7 +10,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/JREQcMKc4TumHcXwsp5k6w/r180/d/fon_3.jpg?imgsrc=1711164329968'
+						src='https://www.vaka.ru/images/stories/vaka-lux/VakaLUXvoln.jpg'
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
@@ -28,7 +28,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/KFGP1R6WZSL3Y32QEdxY-g/r180/d/dlya_shinshill.jpg'
+						src='https://media.istockphoto.com/id/509921302/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D1%82%D0%B8%D1%86%D0%B0-%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5-%D1%80%D0%B0%D0%B7%D0%B1%D1%80%D0%BE%D1%81%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D1%80%D0%BC.jpg?s=612x612&w=0&k=20&c=lm9yFnk4Sz61lBkPH1y3OTiebg63_i6aVKb5r8asfbA='
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
@@ -46,7 +46,7 @@ function ProductCards() {
 			>
 				<figure>
 					<img
-						src='http://biotex.su/thumb/2/GuG0BDmPmgyeLXN6c9Kd-Q/250r/d/granuly.jpg'
+						src='https://ireland.apollo.olxcdn.com/v1/files/5adugokcpbew-UA/image;s=640x460'
 						alt='product'
 						className='h-[250px] object-cover'
 					/>
