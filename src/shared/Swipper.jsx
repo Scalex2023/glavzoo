@@ -47,23 +47,25 @@ function Swipper() {
 				</div>
 			</Slider>
 			<div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white'>
-				<h1
-					className='text-3xl font-bold md:mb-4 text-center flex flex-col items-center'
-					data-aos='fade-right'
-				>
-					<span className='text-[28px] max-w-[700px] leading-none md:text-[55px] drop-shadow-lg md:mb-[20px]'>
-                        Надежный поставщик наполнителей для котов
-					</span>
-					<span className='font-normal drop-shadow-lg text-[18px] md:text-[32px]'>
-                        Производство и оптовые поставки
-					</span>
-				</h1>
-				<a href='#products'
-					className='bg-[#4C67EA] flex justify-center items-center rounded-[500px] md:w-[250px] md:h-[55px] px-[20px] py-[8px] text-white font-bold md:text-[18px] text-[16px] mt-[10px] transition duration-75 hover:scale-90'
-					data-aos='fade-left'
-				>
-					СДЕЛАТЬ ЗАКАЗ
-				</a>
+				<div className='flex flex-col justify-center items-center bg-[#12121254] p-10 rounded-2xl'>
+                    <h1
+                        className='text-3xl font-bold md:mb-4 text-center flex flex-col items-center'
+                        data-aos='fade-right'
+                    >
+                        <span className='text-[28px] max-w-[700px] leading-none md:text-[55px] drop-shadow-lg md:mb-[20px]'>
+                            Надежный поставщик наполнителей для котов
+                        </span>
+                        <span className='font-normal drop-shadow-lg text-[18px] md:text-[32px]'>
+                            Производство и оптовые поставки
+                        </span>
+                    </h1>
+                    <a href='#products'
+                        className='bg-[#4C67EA] flex justify-center items-center rounded-[500px] md:w-[250px] md:h-[55px] px-[20px] py-[8px] text-white font-bold md:text-[18px] text-[16px] mt-[10px] transition duration-75 hover:scale-90'
+                        data-aos='fade-left'
+                    >
+                        СДЕЛАТЬ ЗАКАЗ
+                    </a>
+                </div>
 			</div>
 		</div>
 	)
