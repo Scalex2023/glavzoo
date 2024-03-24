@@ -34,7 +34,7 @@ function ProductCards() {
                             {i.data().desc}
                         </h2>
                     </div>
-                    <button className='mb-5 flex justify-center mx-auto max-w-[250px] px-[45px] rounded-3xl text-white py-[10px] bg-[#4C67EA]'>Подробнее</button>
+                    <a href='#contacts' className='mb-5 flex justify-center mx-auto max-w-[250px] px-[45px] rounded-3xl text-white py-[10px] bg-[#4C67EA]'>Подробнее</a>
 			    </div>
             ))
         }

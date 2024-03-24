@@ -31,6 +31,7 @@ function NewsCards() {
                         <p className='text-[#919191] max-w-[100%] h-[80px] mt-[5px] px-[5px]'>
                             {i.data().desc}
                         </p>
+                        <a href='#contacts' className='mb-5 flex justify-center mx-auto mt-5 max-w-[250px] px-[45px] rounded-3xl text-white py-[10px] bg-[#4C67EA]'>Заказать расчет</a>
                     </div>
                 ))
             }
