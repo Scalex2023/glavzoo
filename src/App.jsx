@@ -7,6 +7,8 @@ import News from './components/News'
 import Tovar from './components/Tovar'
 import Form from './components/Form'
 import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
+import Adminpanel from './components/adminpanel'
 
 function App() {
     
@@ -16,14 +18,19 @@ function App() {
 
 	return (
 		<div>
-			<Header />
-			<Hero />
-			<Products />
-			<News />
-			<Tovar />
-			<Form />
-			<Footer />
-		</div>
+            <Routes>
+                <Route path='/' element={<div>
+                    <Header />
+                    <Hero />
+                    <Products />
+                    <News />
+                    <Tovar />
+                    <Form />
+                    <Footer />
+                </div>} />
+                <Route path='/adminpanelglavzooo' element={<Adminpanel/>} />
+            </Routes>
+        </div>
 	)
 }
 
