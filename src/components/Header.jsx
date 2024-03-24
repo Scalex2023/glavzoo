@@ -15,8 +15,10 @@ function Header() {
 	return (
 		<>
 			<Wrapper>
-				<nav className='flex justify-between items-center p-[17px]'>
-					<img src={logo} alt='logo png' />
+				<nav className='flex justify-between items-center py-[17px]'>
+					<a href="/">
+                        <img src={logo} alt='logo png' />
+                    </a>
 					<ul className='md:flex items-center gap-[30px] hidden'>
 						<li>
 							<a href='#'>Главная</a>
@@ -44,7 +46,7 @@ function Header() {
 						</div>
 						<div className='flex items-center gap-1'>
 							<img src={email} alt='email' />
-							<a href='email:info@biotex.su'>info@biotex.su</a>
+							<a href='mailto:info@biotex.su'>info@biotex.su</a>
 						</div>
 					</form>
 					<div

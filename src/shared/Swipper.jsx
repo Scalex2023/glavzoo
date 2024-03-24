@@ -55,7 +55,7 @@ function Swipper() {
 					</span>
 				</h1>
 				<button
-					className='bg-[#F65152] rounded-[500px] md:w-[270px] md:h-[62px] px-[20px] py-[8px] text-white font-bold md:text-[24px] text-[10px] mt-[10px] transition duration-75 hover:scale-90'
+					className='bg-[#F65152] rounded-[500px] md:w-[250px] md:h-[55px] px-[20px] py-[8px] text-white font-bold md:text-[18px] text-[10px] mt-[10px] transition duration-75 hover:scale-90'
 					data-aos='fade-left'
 				>
 					СДЕЛАТЬ ЗАКАЗ

@@ -1,152 +1,39 @@
-import React from 'react'
+import { app, db } from '../../firebase/firebase';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import { getFirestore, collection, getDocs, doc, setDoc, deleteDoc } from "firebase/firestore"; 
 
 function ProductCards() {
+
+    const [products] = useCollection(
+        collection(getFirestore(app), 'products'),
+        {
+            snapshotListenOptions: { includeMetadataChanges: true },    
+        }
+    );
+
 	return (
 		<>
-			{/* Product 1 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://www.vaka.ru/images/stories/vaka-lux/VakaLUXvoln.jpg'
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Зерносмеси для птиц и грызунов
-					</h2>
-				</div>
-			</div>
-			{/* Product 2 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://media.istockphoto.com/id/509921302/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D1%82%D0%B8%D1%86%D0%B0-%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5-%D1%80%D0%B0%D0%B7%D0%B1%D1%80%D0%BE%D1%81%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D1%80%D0%BC.jpg?s=612x612&w=0&k=20&c=lm9yFnk4Sz61lBkPH1y3OTiebg63_i6aVKb5r8asfbA='
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Премиум рецепты для птиц и грызунов
-					</h2>
-				</div>
-			</div>
-			{/* Product 3 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://ireland.apollo.olxcdn.com/v1/files/5adugokcpbew-UA/image;s=640x460'
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Экструдированные гранулыa
-					</h2>
-				</div>
-			</div>
-			{/* Product 4 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://st42.stpulscen.ru/images/product/466/561/418_medium2.jpg'
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Прессованные гранулы
-					</h2>
-				</div>
-			</div>
-			{/* Product 5 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://kartinki.pics/uploads/posts/2022-12/thumbs/1671781727_kartinkin-net-p-korm-dlya-koshek-kartinki-oboi-4.jpg'
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Корм для собак и кошек
-					</h2>
-				</div>
-			</div>
-			{/* Product 6 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://static.insales-cdn.com/images/products/1/807/76653351/4333.jpeg'
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Травяные гранулы
-					</h2>
-				</div>
-			</div>
-			{/* Product 7 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://lh3.googleusercontent.com/proxy/IrG3PGyFDb0eOXkhCaHZueNzEeKPkVkYqstQUbHvlpa6S8QyaYflElmYSbBpKAq-hm3OjBU0'
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Лакомства для птиц и грызунов
-					</h2>
-				</div>
-			</div>
-			{/* Product 8 */}
-			<div
-				className='card w-[250px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
-				data-aos='zoom-in'
-			>
-				<figure>
-					<img
-						src='https://www.megamix.ru/images/vitaminy/kormovye-dobavki-dlya-selskokhozyaystvennykh-zhivotnykh-3.jpg'
-						alt='product'
-						className='h-[250px] object-cover'
-					/>
-				</figure>
-				<div className='card-body'>
-					<h2 className='card-title text-[18px] text-black'>
-						Различные добавки для корма по вашему выбору
-					</h2>
-				</div>
-			</div>
+        {
+            products?.docs.map(i => (
+                <div
+                    className='card w-[250px] h-[350px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
+                    data-aos='zoom-in'
+			    >
+                    <figure>
+                        <img
+                            src={i.data().image}
+                            alt='product'
+                            className='h-[250px] w-full object-cover'
+                        />
+                    </figure>
+                    <div className='card-body'>
+                        <h2 className='card-title text-[18px] text-black'>
+                            {i.data().name}
+                        </h2>
+                    </div>
+			    </div>
+            ))
+        }
 		</>
 	)
 }
