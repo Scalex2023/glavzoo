@@ -17,18 +17,18 @@ function NewsCards() {
             {
                 news?.docs.map(i => (
                     <div
-                        className='flex justify-center items-center flex-col w-[280px] md:w-[350px] border text-center pb-10 rounded-[20px]'
+                        className='flex justify-center h-[480px] items-center flex-col w-[280px] md:w-[350px] border text-center pb-10 rounded-[20px]'
                         data-aos='zoom-in'
                     >
                         <img
                             src={i.data().image}
                             alt='404'
-                            className='rounded-t-[20px] w-full h-64 object-cover'
+                            className='rounded-t-[20px] h-[250px] w-full object-cover'
                         />
-                        <h1 className='text-[#3a3a3a] font-bold text-[25px] mt-5'>
+                        <h1 className='text-[#3a3a3a] font-bold text-[24px] mt-5'>
                             {i.data().title}
                         </h1>
-                        <p className='text-[#919191] max-w-[100%] h-[80px] mt-[5px] px-[30px]'>
+                        <p className='text-[#919191] max-w-[100%] h-[80px] mt-[5px] px-[5px]'>
                             {i.data().desc}
                         </p>
                     </div>

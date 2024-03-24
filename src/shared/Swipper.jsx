@@ -1,8 +1,5 @@
 import React from 'react'
 import Slider from 'react-slick'
-import slider1 from '../assets/swiper1.jpg'
-import slider2 from '../assets/swiper2.jpg'
-import slider3 from '../assets/swiper3.jpg'
 
 function Swipper() {
 	const settings = {
@@ -22,21 +19,28 @@ function Swipper() {
 			<Slider {...settings}>
 				<div>
 					<img
-						src={slider1}
+						src={"https://freshcat.ru/images/articles/5_5.jpg"}
 						className='w-full h-96 lg:max-h-[80vh] lg:h-auto object-cover'
 						alt='slider1'
 					/>
 				</div>
 				<div>
 					<img
-						src={slider2}
+						src={"https://zoodelo.com/upload/medialibrary/e69/e690c86ecc452ada96142baebf30a94a.jpg"}
 						className='w-full h-96 lg:max-h-[80vh] lg:h-auto object-cover'
 						alt='slider2'
 					/>
 				</div>
 				<div>
 					<img
-						src={slider3}
+						src={"https://images.prom.ua/3890392217_w640_h640_drevesnyj-napolnitel-dlya.jpg"}
+						className='w-full h-96 lg:max-h-[80vh] lg:h-auto object-cover'
+						alt='slider3'
+					/>
+				</div>
+                <div>
+					<img
+						src={"https://upload.wikimedia.org/wikipedia/commons/7/71/SilicaGel.jpg"}
 						className='w-full h-96 lg:max-h-[80vh] lg:h-auto object-cover'
 						alt='slider3'
 					/>
@@ -47,11 +51,11 @@ function Swipper() {
 					className='text-3xl font-bold md:mb-4 text-center flex flex-col items-center'
 					data-aos='fade-right'
 				>
-					<span className='text-[20px] md:text-[55px] drop-shadow-lg md:mb-[20px]'>
-						ПРОИЗВОДСТВО ЗООКОРМОВ
+					<span className='text-[24px] max-w-[700px] leading-none md:text-[55px] drop-shadow-lg md:mb-[20px]'>
+                        Надежный поставщик наполнителей для котов
 					</span>
-					<span className='font-normal drop-shadow-lg text-[15px] md:text-[40px]'>
-						ПО НАШЕЙ ИЛИ ВАШЕЙ РЕЦЕПТУРЕ
+					<span className='font-normal drop-shadow-lg text-[18px] md:text-[32px]'>
+                        Производство и оптовые поставки
 					</span>
 				</h1>
 				<button

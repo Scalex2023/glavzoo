@@ -88,6 +88,16 @@ function Header() {
 									<a href='#'>Контакты</a>
 								</li>
 							</ul>
+                            <form className='md:flex mt-8 items-center gap-[22px]'>
+                                <div className='flex items-center gap-1'>
+                                    <img src={phone} alt='phone' />
+                                    <a href='tel:+78632695017'>+7 (863) 269-50-17</a>
+                                </div>
+                                <div className='flex items-center mt-2 gap-1'>
+                                    <img src={email} alt='email' />
+                                    <a href='mailto:info@biotex.su'>info@biotex.su</a>
+                                </div>
+                            </form>
 							<div
 								className='absolute top-0 right-0 bg-[green] p-[10px] cursor-pointer'
 								onClick={handleShowNavbar}

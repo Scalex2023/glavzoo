@@ -16,21 +16,22 @@ function ProductCards() {
         {
             products?.docs.map(i => (
                 <div
-                    className='card w-[250px] h-[350px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
+                    className='card w-[31%] h-[480px] card-compact bg-base-100 shadow-xl max-h-[55vh] cursor-pointer'
                     data-aos='zoom-in'
 			    >
                     <figure>
                         <img
                             src={i.data().image}
                             alt='product'
-                            className='h-[250px] w-full object-cover'
+                            className='h-[250px] min-h-[250px] w-full object-cover'
                         />
                     </figure>
                     <div className='card-body'>
-                        <h2 className='card-title text-[18px] text-black'>
+                        <h2 className='card-title text-center text-[16px] text-[#525252]'>
                             {i.data().name}
                         </h2>
                     </div>
+                    <button className='mb-5 flex justify-center mx-auto max-w-[250px] px-[45px] rounded-3xl text-white py-[10px] bg-[#8FCC54]'>Подробнее</button>
 			    </div>
             ))
         }
