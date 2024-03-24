@@ -50,7 +50,7 @@ function Header() {
 						</div>
 					</form>
 					<div
-						className='flex flex-col gap-[6px] cursor-pointer md:hidden bg-[green] p-[10px]'
+						className='flex flex-col gap-[6px] cursor-pointer md:hidden bg-[#4C67EA] p-[10px]'
 						onClick={handleShowNavbar}
 					>
 						<div className='w-[30px] h-[3px] bg-[white] rounded-[10px]'></div>
@@ -99,7 +99,7 @@ function Header() {
                                 </div>
                             </form>
 							<div
-								className='absolute top-0 right-0 bg-[green] p-[10px] cursor-pointer'
+								className='absolute top-0 right-0 bg-[#4C67EA] p-[10px] cursor-pointer'
 								onClick={handleShowNavbar}
 							>
 								<img src={close} alt='close' />
