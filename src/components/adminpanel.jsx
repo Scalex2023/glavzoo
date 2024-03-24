@@ -92,7 +92,7 @@ const Adminpanel = () => {
                         <p onClick={() => setTab(2)} className={`${tab == 2 ? "bg-[#458FF6] text-[#fff] font-medium " : "bg-[#ececec50] text-[#7a7c80] "} text-lg rounded-[8px] hover:cursor-pointer hover:translate-x-1.5 transition-all py-[8px] px-[25px] w-full mr-5`}>Новости</p>
                     </div>
                 </div>
-                <div className="p-5 bg-[#FAFBFF] w-11/12">
+                <div className="p-5 bg-[#FAFBFF] w-full md:w-11/12">
                     {
                         tab == 1 
                         &&
@@ -105,8 +105,8 @@ const Adminpanel = () => {
                                 <thead className="2xl:table hidden w-full">
                                     <tr className="flex justify-between py-2.5">
                                         <th className="w-[50px] text-center">№</th>
-                                        <th className="w-8/12">Название</th>
-                                        <th className="w-3/12">Картинка</th>
+                                        <th className="w-full md:w-8/12">Название</th>
+                                        <th className="w-full md:w-3/12">Картинка</th>
                                         <th className="w-1/12 text-center">Удалить</th>
                                     </tr>
                                 </thead>
@@ -115,8 +115,8 @@ const Adminpanel = () => {
                                         animals?.docs.sort().map((item, index) => (
                                             <tr className="bg-[#FFFFFF] hover:bg-[#f1f1f16c] flex-col items-start xl:flex-row flex justify-between w-full py-[10px]">
                                                 <th className="w-[50px] hidden xl:block text-center">{index + 1}</th>
-                                                <td className="w-8/12">{item.data().name}</td>
-                                                <td className="w-3/12">{item.data().image.toString().slice(0, 36)}...</td>
+                                                <td className="w-full md:w-8/12">{item.data().name}</td>
+                                                <td className="w-full md:w-3/12">{item.data().image.toString().slice(0, 36)}...</td>
                                                 <td onClick={() => deleteCategory(item.id)} className="w-1/12 cursor-pointer block hover:scale-105 transition-all text-red-500 text-center">x</td>
                                             </tr>
                                         ))
@@ -137,9 +137,9 @@ const Adminpanel = () => {
                                 <thead className="w-full hidden 2xl:table">
                                     <tr className="flex justify-between py-2.5">
                                         <th className="w-[65px] text-center">№</th>
-                                        <th className="w-4/12">Имя</th>
-                                        <th className="w-4/12">Описание</th>
-                                        <th className="w-3/12">Картинка</th>
+                                        <th className="w-full md:w-4/12">Имя</th>
+                                        <th className="w-full md:w-4/12">Описание</th>
+                                        <th className="w-full md:w-3/12">Картинка</th>
                                         <th className="w-1/12">Удалить</th>
                                     </tr>
                                 </thead>
@@ -148,9 +148,9 @@ const Adminpanel = () => {
                                         categories?.docs.sort().map((item, index) => (
                                             <tr className="bg-[#FFFFFF] hover:bg-[#f1f1f16c] flex-col items-start 2xl:flex-row flex justify-between w-full py-[10px]">
                                                 <th className="w-[65px] hidden xl:block text-center">{index + 1}</th>
-                                                <td className="w-4/12">{item.data().title}</td>
-                                                <td className="w-4/12">{item.data().desc}</td>
-                                                <td className="w-3/12">{item.data().image.toString().slice(0, 36)}...</td>
+                                                <td className="w-full md:w-4/12">{item.data().title}</td>
+                                                <td className="w-full md:w-4/12">{item.data().desc}</td>
+                                                <td className="w-full md:w-3/12">{item.data().image.toString().slice(0, 36)}...</td>
                                                 <td onClick={() => deleteAnimal(item.id)} className="w-1/12 cursor-pointer block hover:scale-105 transition-all text-red-500 text-center">x</td>
                                             </tr>
                                         ))
