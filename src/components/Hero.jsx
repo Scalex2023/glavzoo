@@ -15,19 +15,19 @@ function Hero() {
 					data-aos='fade-up'
 				>
 					<div className='w-full md:w-[30%] flex items-center gap-3'>
-						<img src={settings} alt='settings image' className='w-[60px]' />
+						<img src={settings} alt='settings image' className='w-[75px]' />
 						<p className='font-semibold text-black'>
                             Производственные мощности в России и зарубежом
 						</p>
 					</div>
 					<div className='w-full md:w-[25%] flex items-center gap-3'>
-						<img src={like} alt='like image' className='w-[60px]' />
+						<img src={like} alt='like image' className='w-[75px]' />
 						<p className='font-semibold text-black'>
                             Тщательный отбор партнеров
 						</p>
 					</div>
 					<div className='w-full md:w-[25%] flex items-center gap-3'>
-						<img src={current} alt='current image' className='w-[60px]' />
+						<img src={current} alt='current image' className='w-[75px]' />
 						<p className='font-semibold text-black'>
                             Контроль качества на каждом этапе
 						</p>
