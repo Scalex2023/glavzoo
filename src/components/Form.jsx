@@ -1,66 +1,158 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Wrapper from '../layout/Wrapper'
+import { useCollection } from 'react-firebase-hooks/firestore'
+import { collection, getFirestore } from 'firebase/firestore'
+import { app } from '../firebase/firebase'
+import axios from 'axios'
 
 function Form() {
+	const [headings] = useCollection(collection(getFirestore(app), 'headings'), {
+		snapshotListenOptions: { includeMetadataChanges: true },
+	})
+
+	const fourthHeadings = headings?.docs[3]
+
+    const [name, setName] = useState()
+    const [family, setFamily] = useState()
+    const [email, setEmail] = useState()
+    const [tel, setTel] = useState()
+    const [company, setCompany] = useState()
+    const [inn, setInn] = useState()
+    const [address, setAddress] = useState()
+    const [info, setInfo] = useState()
+
+    const onSend = async () => {
+        if(name && family && email.includes("@") && tel.length == 11 && address) {
+            const TOKEN = '6971302911:AAGsb1ueM78OT6re3HGLdxHTkao7hixwrFE'
+            const CHAT_ID = '-1002024894156'
+            const URL_API = 'https://api.telegram.org/bot' + TOKEN + '/sendMessage'
+    
+            let msg = `<b>---------------------------</b>\n`
+            msg += `<b>Имя: ${name}</b>\n`
+            msg += `<b>Фамилия: ${family}</b>\n`
+            msg += `<b>Email: ${email}</b>\n`
+            msg += `<b>Номер телефона: ${tel}</b>\n`
+            msg += `<b>Название компании: ${company}</b>\n`
+            msg += `<b>ИНН: ${inn}</b>\n`
+            msg += `<b>Адрес: ${address}</b>\n`
+            msg += `<b>Ещё: ${info}</b>\n`
+            msg += `<b>---------------------------</b>`
+            
+            await axios.post(URL_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: msg
+            }, setName(''), setFamily(""), setEmail(""), setTel("", setCompany("", setInn(""), setAddress("", setInfo(""))))).then(() => {
+                alert("Отправлено!")
+            })
+        } else {
+            alert("Введите все правильно!")
+        }
+    }
+
 	return (
 		<>
 			<Wrapper>
-				<div id='contacts' className='flex flex-col justify-center items-center'>
+				<div
+					id='contacts'
+					className='flex flex-col justify-center items-center'
+				>
 					<div
 						className='flex flex-col items-start px-[20px] md:px-0'
 						data-aos='zoom-in-up'
 					>
-						<h1
-							className='text-[#4C67EA] text-center w-full font-semibold text-[40px] mt-[110px] mb-[20px] font-Poppins'
-							data-aos='fade-right'
-						>
-							Оставьте заявку
-						</h1>
+						{fourthHeadings && (
+							<h1
+								className='text-[#4C67EA] text-center w-full font-semibold text-[40px] mt-[110px] mb-[20px] font-Poppins'
+								data-aos='fade-right'
+							>
+								{fourthHeadings.data().title}
+							</h1>
+						)}
 
 						<div>
 							<div className='flex justify-center items-center flex-col gap-4'>
 								<div className='flex flex-col md:flex-row items-center gap-4 w-full'>
-									<input
-										type='text'
-										name='firstname'
-										placeholder='Имя'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
-									/>
-									<input
-										type='text'
-										name='lastname'
-										placeholder='Фамилия'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
-									/>
+									<div className='flex justify-center items-center flex-col gap-4'>
+										<div className='flex flex-col md:flex-row items-center gap-4 w-full'>
+											<input
+                                                value={name}
+                                                onChange={e => setName(e.target.value)}
+												type='text'
+												
+												placeholder='*Имя'
+												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+											/>
+											<input
+                                                value={family}
+                                                onChange={e => setFamily(e.target.value)}
+												type='text'
+												
+												placeholder='*Фамилия'
+												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+											/>
+										</div>
+										<div className='flex items-center gap-4 flex-col md:flex-row w-full'>
+											<input
+                                                value={email}
+                                                onChange={e => setEmail(e.target.value)}
+												type='email'
+												
+												placeholder='*Email'
+												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+											/>
+											<input
+                                                value={tel}
+                                                onChange={e => {
+                                                    if (e.target.value.length != 12) {
+                                                        setTel(e.target.value)
+                                                    }
+                                                }}
+												type='number'
+												placeholder='*Номер телефона'
+												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+											/>
+										</div>
+										<div className='flex items-center gap-4 flex-col md:flex-row w-full'>
+											<input
+                                                value={company}
+                                                onChange={e => setCompany(e.target.value)}
+												type='text'
+												
+												placeholder='Название компании'
+												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+											/>
+											<input
+                                                value={inn}
+                                                onChange={e => setInn(e.target.value)}
+												type='number'
+												
+												placeholder='ИНН'
+												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+											/>
+										</div>
+
+										<input
+                                            value={address}
+                                            onChange={e => setAddress(e.target.value)}
+											type='text'
+											
+											placeholder='*Адрес'
+											className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+										/>
+
+										<textarea
+                                            value={info}
+                                            onChange={e => setInfo(e.target.value)}
+											name='message'
+											cols='30'
+											rows='10'
+											placeholder='Информация'
+											className='w-full bg-[#70869d12] textarea rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
+										></textarea>
+									</div>
 								</div>
-								<div className='flex items-center gap-4 flex-col md:flex-row w-full'>
-									<input
-										type='email'
-										name='email'
-										placeholder='Email'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
-									/>
-									<input
-										type='number'
-										name='password'
-										placeholder='Номер телефона'
-										className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
-									/>
-								</div>
-								<input
-									type='text'
-									name='Address'
-									placeholder='Адрес'
-									className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
-								/>
-								<textarea
-									name='message'
-									cols='30'
-									rows='10'
-									placeholder='Информация'
-									className='w-full bg-[#70869d12] textarea rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
-								></textarea>
-								<button className='bg-[#4C67EA] text-white px-[55px] py-[15px] rounded-[500px] transition duration-75 ease-in hover:scale-90 mt-[10px] font-Poppins'>
+								<button onClick={onSend} className='bg-[#4C67EA] text-white px-[55px] py-[15px] rounded-[500px] transition duration-75 ease-in hover:scale-90 mt-[10px] font-Poppins'>
 									Отправить
 								</button>
 							</div>
@@ -68,14 +160,22 @@ function Form() {
 					</div>
 				</div>
 			</Wrapper>
-            <div className='flex justify-center fixed bottom-10 right-8 gap-4 items-center my-5'>
-                <a href="/">
-                    <img className='w-12' src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="telegram" />
-                </a>
-                <a href="/">
-                    <img className='w-12' src="https://static-00.iconduck.com/assets.00/whatsapp-icon-2048x2048-dumosfvo.png" alt="telegram" />
-                </a>
-            </div>
+			<div className='flex justify-center fixed bottom-10 right-8 gap-4 items-center my-5'>
+				<a href='https://t.me/glavzoo' target='_blank'>
+					<img
+						className='w-12'
+						src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png'
+						alt='telegram'
+					/>
+				</a>
+				<a href='https://wa.me/79001202080' target='_blank'>
+					<img
+						className='w-12'
+						src='https://static-00.iconduck.com/assets.00/whatsapp-icon-2048x2048-dumosfvo.png'
+						alt='telegram'
+					/>
+				</a>
+			</div>
 		</>
 	)
 }
