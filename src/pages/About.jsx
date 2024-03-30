@@ -120,7 +120,7 @@ function About() {
 						{tenHeadings && (
 							<>
 								<h1
-									className='text-[50px] font-bold text-[#4c67ea] max-w-[100%] text-start md:text-center font-Poppins leading-[1.1]'
+									className='text-[50px] font-bold text-[#4c67ea] max-w-[100%] text-start font-Poppins leading-[1.1]'
 									data-aos='fade-right'
 								>
 									{tenHeadings?.data().title}
