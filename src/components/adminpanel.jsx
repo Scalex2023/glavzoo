@@ -466,7 +466,7 @@ const Adminpanel = () => {
 							value={headingInp.title || ''}
 							type='text'
 							placeholder='Название'
-							className='textarea textarea-bordered'
+							className='textarea textarea-bordered min-h-52'
 						/>
 						<textarea
 							onChange={e =>
@@ -475,7 +475,7 @@ const Adminpanel = () => {
 							value={headingInp.desc || ''}
 							type='text'
 							placeholder='Описание'
-							className='textarea textarea-bordered'
+							className='textarea textarea-bordered min-h-52'
 						/>
 
 						<button
