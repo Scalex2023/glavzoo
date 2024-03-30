@@ -29,7 +29,7 @@ function Header() {
 								<Link to='/about'>О нас</Link>
 							</li>
 							<li>
-								<a href='/#products'>Виды продукции</a>
+								<a onClick={() => window.location.href = "/#products"} href='/#products'>Виды продукции</a>
 							</li>
 							<li>
 								<a href='#contacts'>Контакты</a>
