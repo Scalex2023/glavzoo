@@ -459,23 +459,23 @@ const Adminpanel = () => {
 				<div className='modal-box'>
 					<h3 className='font-bold text-lg'>Добавить Заголовоки.</h3>
 					<div className='w-full flex flex-col gap-2 mt-[15px]'>
-						<input
+						<textarea
 							onChange={e =>
 								setHeadingInp(prev => ({ ...prev, title: e.target.value }))
 							}
 							value={headingInp.title || ''}
 							type='text'
 							placeholder='Название'
-							className='input input-bordered'
+							className='textarea textarea-bordered'
 						/>
-						<input
+						<textarea
 							onChange={e =>
 								setHeadingInp(prev => ({ ...prev, desc: e.target.value }))
 							}
 							value={headingInp.desc || ''}
 							type='text'
 							placeholder='Описание'
-							className='input input-bordered'
+							className='textarea textarea-bordered'
 						/>
 
 						<button
