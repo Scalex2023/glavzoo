@@ -34,3 +34,23 @@ input[type='number']::-webkit-outer-spin-button {
 	appearance: none;
 	margin: 0;
 }
+
+.overlay-container {
+	background-image: url('https://catlittercompany.com/wp-content/uploads/2023/04/AdobeStock_364888556-scaled.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+}
+
+.background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #344a5f;
+	opacity: 0.9;
+}
+
+
