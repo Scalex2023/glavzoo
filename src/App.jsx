@@ -9,29 +9,35 @@ import Form from './components/Form'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import Adminpanel from './components/adminpanel'
+import About from './pages/About'
 
 function App() {
+	useEffect(() => {
+		Aos.init({})
+	}, [])
 
-    useEffect(() => {
-        Aos.init({})
-    }, [])
-    
-    return (
-        <div>
-            <Routes>
-                <Route path='/' element={<div>
-                    <Header />
-                    <Hero />
-                    <Products />
-                    <News />
-                    {/* <Tovar /> */}
-                    <Form />
-                    <Footer />
-                </div>} />
-                <Route path='/adminpanelglavzooo' element={<Adminpanel />} />
-            </Routes>
-        </div>
-    )
+	return (
+		<div>
+			<Routes>
+				<Route
+					path='/'
+					element={
+						<div>
+							<Header />
+							<Hero />
+							<Products />
+							<News />
+							{/* <Tovar /> */}
+							<Form />
+							<Footer />
+						</div>
+					}
+				/>
+				<Route path='/adminpanelglavzooo' element={<Adminpanel />} />
+				<Route path='/about' element={<About />} />
+			</Routes>
+		</div>
+	)
 }
 
 export default App
