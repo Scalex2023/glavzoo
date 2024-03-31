@@ -29,7 +29,11 @@ function Header() {
 								<Link to='/about'>О нас</Link>
 							</li>
 							<li>
-								<a onClick={() => window.location.href = "/#products"} href='/#products'>Виды продукции</a>
+								<Link onClick={() => {
+				                                    setTimeout(() => {
+				                                        document.getElementById("products").scrollIntoView()
+				                                    }, 100);
+				                                }} to='/#products'>Виды продукции</Link>
 							</li>
 							<li>
 								<a href='#contacts'>Контакты</a>
@@ -74,7 +78,11 @@ function Header() {
 									<Link to='/about'>О нас</Link>
 								</li>
 								<li>
-									<a href='/#products'>Виды продукции</a>
+									<Link onClick={() => {
+					                                    setTimeout(() => {
+					                                        document.getElementById("products").scrollIntoView()
+					                                    }, 100);
+					                                }} to='/#products'>Виды продукции</Link>
 								</li>
 								<li>
 									<a href='#contacts'>Контакты</a>
