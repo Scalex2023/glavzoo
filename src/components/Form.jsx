@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Wrapper from '../layout/Wrapper'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { collection, getFirestore } from 'firebase/firestore'
@@ -9,6 +9,11 @@ function Form() {
 	const [headings] = useCollection(collection(getFirestore(app), 'headings'), {
 		snapshotListenOptions: { includeMetadataChanges: true },
 	})
+
+    const telRef = useRef(null)
+    const emailRef = useRef(null)
+    const nameRef = useRef(null)
+    const familyRef = useRef(null)
 
 	const fourthHeadings = headings?.docs[3]
 
@@ -22,7 +27,7 @@ function Form() {
     const [info, setInfo] = useState()
 
     const onSend = async () => {
-        if(name && family && email.includes("@") && tel.length == 11 && address) {
+        if(name && family && email.includes("@") && tel.length == 11) {
             const TOKEN = '6971302911:AAGsb1ueM78OT6re3HGLdxHTkao7hixwrFE'
             const CHAT_ID = '-1002024894156'
             const URL_API = 'https://api.telegram.org/bot' + TOKEN + '/sendMessage'
@@ -43,10 +48,18 @@ function Form() {
                 parse_mode: 'html',
                 text: msg
             }, setName(''), setFamily(""), setEmail(""), setTel("", setCompany("", setInn(""), setAddress("", setInfo(""))))).then(() => {
-                alert("Отправлено!")
+                alert("Спасибо за заявку, вскоре мы свяжемся с Вами!")
             })
         } else {
-            alert("Введите все правильно!")
+            if (!name) {
+                nameRef.current.style.border = "1px solid red"
+            }
+            if (!family) {
+                familyRef.current.style.border = "1px solid red"
+            }
+            if (!tel) {
+                telRef.current.style.border = "1px solid red"
+            }
         }
     }
 
@@ -79,7 +92,8 @@ function Form() {
                                                 value={name}
                                                 onChange={e => setName(e.target.value)}
 												type='text'
-												
+                                                onFocus={() => nameRef.current.style.border = "0"}
+												ref={nameRef}
 												placeholder='*Имя'
 												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 											/>
@@ -87,7 +101,8 @@ function Form() {
                                                 value={family}
                                                 onChange={e => setFamily(e.target.value)}
 												type='text'
-												
+                                                onFocus={() => familyRef.current.style.border = "0"}
+												ref={familyRef}
 												placeholder='*Фамилия'
 												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 											/>
@@ -97,7 +112,8 @@ function Form() {
                                                 value={email}
                                                 onChange={e => setEmail(e.target.value)}
 												type='email'
-												
+                                                onFocus={() => emailRef.current.style.border = "0"}
+												ref={emailRef}
 												placeholder='*Email'
 												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 											/>
@@ -108,6 +124,8 @@ function Form() {
                                                         setTel(e.target.value)
                                                     }
                                                 }}
+                                                onFocus={() => telRef.current.style.border = "0"}
+												ref={telRef}
 												type='number'
 												placeholder='*Номер телефона'
 												className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
@@ -137,7 +155,7 @@ function Form() {
                                             onChange={e => setAddress(e.target.value)}
 											type='text'
 											
-											placeholder='*Адрес'
+											placeholder='Адрес'
 											className='input w-full bg-[#70869d12] rounded-[5px] text-[#4C67EA] font-Poppins px-[30px] py-[15px] text-[17px]'
 										/>
 
