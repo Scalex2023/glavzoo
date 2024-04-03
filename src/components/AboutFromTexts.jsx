@@ -17,7 +17,7 @@ function AboutFromTexts() {
 						<h2 className='text-xl font-bold text-gray-800 mb-2'>Телефон:</h2>
 						<ul>
 							<li className='text-base font-medium text-gray-700'>
-								<a href='tel:+78632695017'>+7 (863) 269-50-17</a>
+								<a href='tel:+79001202080'>+7 (900) 120 20 80</a>
 							</li>
 						</ul>
 					</div>
@@ -25,14 +25,14 @@ function AboutFromTexts() {
 						<h2 className='text-xl font-bold text-gray-800 mb-2'>Email:</h2>
 						<ul className='list-disc pl-5'>
 							<li className='text-base font-medium text-gray-700'>
-								info@glavzoo.ru
+								<a href="mailto:info@glavzoo.ru">info@glavzoo.ru</a>
 							</li>
 						</ul>
 					</div>
 					<div>
 						<div className='w-full md:w-[400px] md:h-[400px] bg-gray-200 rounded-lg'>
 							<img
-								src='https://play-lh.googleusercontent.com/uqCdtOFFI_PkFV_9Vm0Ad5Wf1WPJH3rtDSG_tRZ6KVDcWMn14K6fRXffQUeaqCW04g'
+								src='https://image.made-in-china.com/202f0j00dOAhZwBCKHbG/Wholesale-Price-White-Color-Desiccant-Silica-Gel-Manufacturers-in-China.webp'
 								alt='img'
 								className='object-cover w-full h-full rounded-lg'
 							/>
