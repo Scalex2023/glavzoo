@@ -7,6 +7,7 @@ import Form from '../components/Form'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { collection, getFirestore } from 'firebase/firestore'
 import { app } from '../firebase/firebase'
+import AboutFromTexts from '../components/AboutFromTexts'
 
 function About() {
 	const [headings] = useCollection(collection(getFirestore(app), 'headings'), {
@@ -185,6 +186,7 @@ function About() {
 			</Wrapper>
 
 			<Form />
+			<AboutFromTexts />
 			<Footer />
 		</>
 	)
