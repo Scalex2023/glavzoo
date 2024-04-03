@@ -17,7 +17,7 @@ function AboutFromTexts() {
 						<h2 className='text-xl font-bold text-gray-800 mb-2'>Телефон:</h2>
 						<ul>
 							<li className='text-base font-medium text-gray-700'>
-								<a href='tel:+79001202080'>+7 (900) 120 20 80</a>
+								<a href='tel:+78632695017'>+7 (863) 269-50-17</a>
 							</li>
 						</ul>
 					</div>
@@ -25,14 +25,14 @@ function AboutFromTexts() {
 						<h2 className='text-xl font-bold text-gray-800 mb-2'>Email:</h2>
 						<ul className='list-disc pl-5'>
 							<li className='text-base font-medium text-gray-700'>
-								<a href="mailto:info@glavzoo.ru">info@glavzoo.ru</a>
+								info@glavzoo.ru
 							</li>
 						</ul>
 					</div>
 					<div>
-						<div className='hidden md:block w-64 h-64 bg-gray-200 rounded-lg'>
+						<div className='w-full md:w-[400px] md:h-[400px] bg-gray-200 rounded-lg'>
 							<img
-								src='https://image.made-in-china.com/202f0j00dOAhZwBCKHbG/Wholesale-Price-White-Color-Desiccant-Silica-Gel-Manufacturers-in-China.webp'
+								src='https://play-lh.googleusercontent.com/uqCdtOFFI_PkFV_9Vm0Ad5Wf1WPJH3rtDSG_tRZ6KVDcWMn14K6fRXffQUeaqCW04g'
 								alt='img'
 								className='object-cover w-full h-full rounded-lg'
 							/>
@@ -41,19 +41,40 @@ function AboutFromTexts() {
 				</div>
 				<div>
 					<h2 className='text-xl font-bold text-gray-800 mb-2'>
-						Местоположение:
+						Яндекс карты, точка:
 					</h2>
-					<div className='w-60 h-60 md:w-96 md:h-96 bg-gray-200 rounded-lg'>
-						<iframe
-							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.2414201891374!2d39.6258714!3d47.2509823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c7643faef0a9%3A0x69d11e0b938ca7f7!2z0K3Qu9C10LLQsNGC0L7RgNC90YvQuSDQv9C10YAuLCA00JAsINCg0L7RgdGC0L7Qsi3QvdCwLdCU0L7QvdGDLCDQoNC-0YHRgtC-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDM0NDAwMA!5e0!3m2!1sru!2s!4v1712145165652!5m2!1sru!2s'
-							width='100%'
-							height='100%'
-							style={{ border: '0' }}
-							allowfullscreen=''
-							loading='lazy'
-							referrerpolicy='no-referrer-when-downgrade'
-							className='rounded-lg'
-						></iframe>
+					<div className='w-full h-[250px] md:w-[500px] md:h-[605px] rounded-lg z-[-1]'>
+						<div style={{ position: 'relative', overflow: 'hidden' }}>
+							<a
+								href='https://yandex.uz/maps/41/yoshkar-ola/?utm_medium=mapframe&utm_source=maps'
+								style={{
+									color: '#eee',
+									fontSize: '12px',
+									position: 'absolute',
+									top: '0px',
+								}}
+							>
+								Йошкар‑Ола
+							</a>
+							<a
+								href='https://yandex.uz/maps/41/yoshkar-ola/house/elevatorny_proyezd_4a/YE4Yfg5lQUIGQFtsfXpwdX5mZg==/?ll=47.961789%2C56.614252&mode=search&sll=69.279737%2C41.311151&sspn=0.302811%2C0.126066&text=%D0%AD%D0%BB%D0%B5%D0%B2%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B9%204%D0%90&utm_medium=mapframe&utm_source=maps&z=12'
+								style={{
+									color: '#eee',
+									fontSize: '12px',
+									position: 'absolute',
+									top: '14px',
+								}}
+							>
+								Элеваторный 4А — Яндекс Карты
+							</a>
+							<iframe
+								src='https://yandex.uz/map-widget/v1/?ll=47.961789%2C56.614252&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjk1NDYzMTg3EnHQoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCc0LDRgNC40Lkg0K3Quywg0JnQvtGI0LrQsNGALdCe0LvQsCwg0K3Qu9C10LLQsNGC0L7RgNC90YvQuSDQv9GA0L7QtdC30LQsIDTQkCIKDV6VP0IV_nRiQg%2C%2C&sll=69.279737%2C41.311151&sspn=0.302811%2C0.126066&text=%D0%AD%D0%BB%D0%B5%D0%B2%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B9%204%D0%90&z=12'
+								frameborder='1'
+								allowfullscreen='true'
+								style={{ position: 'relative' }}
+								className='w-full h-[250px] md:min-h-[605px]'
+							></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
