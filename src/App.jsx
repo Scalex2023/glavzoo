@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import Adminpanel from './components/adminpanel'
 import About from './pages/About'
+import AboutFromTexts from './components/AboutFromTexts'
 
 function App() {
 	useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
 							<News />
 							{/* <Tovar /> */}
 							<Form />
+							<AboutFromTexts />
 							<Footer />
 						</div>
 					}
