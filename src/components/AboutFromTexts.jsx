@@ -43,7 +43,7 @@ function AboutFromTexts() {
 					<h2 className='text-xl font-bold text-gray-800 mb-2'>
 						Яндекс карты, точка:
 					</h2>
-					<div className='w-full h-[250px] md:w-[500px] md:h-[605px] rounded-lg z-[-1]'>
+					<div className='w-full h-[250px] md:w-[750px] md:h-[750px] rounded-lg z-[-1]'>
 						<div style={{ position: 'relative', overflow: 'hidden' }}>
 							<a
 								href='https://yandex.uz/maps/41/yoshkar-ola/?utm_medium=mapframe&utm_source=maps'
