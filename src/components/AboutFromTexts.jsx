@@ -30,7 +30,7 @@ function AboutFromTexts() {
 						</ul>
 					</div>
 					<div>
-						<div className='w-full md:w-[400px] md:h-[400px] bg-gray-200 rounded-lg'>
+						<div className='w-full md:w-[340px] md:h-[340px] bg-gray-200 rounded-lg'>
 							<img
 								src='https://image.made-in-china.com/202f0j00dOAhZwBCKHbG/Wholesale-Price-White-Color-Desiccant-Silica-Gel-Manufacturers-in-China.webp'
 								alt='img'
