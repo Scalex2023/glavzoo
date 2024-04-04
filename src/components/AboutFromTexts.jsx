@@ -46,13 +46,9 @@ function AboutFromTexts() {
 					</h2>
 					<div className='w-full mt-6 h-full md:w-full rounded-lg z-[-1]'>
 						<div className='h-full' style={{ position: 'relative', overflow: 'hidden' }}>
-							<iframe
-								src='https://yandex.ru/map-widget/v1/?ll=47.961789%2C56.614252&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjk1NDYzMTg3EnHQoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCc0LDRgNC40Lkg0K3Quywg0JnQvtGI0LrQsNGALdCe0LvQsCwg0K3Qu9C10LLQsNGC0L7RgNC90YvQuSDQv9GA0L7QtdC30LQsIDTQkCIKDV6VP0IV_nRiQg%2C%2C&sll=69.279737%2C41.311151&sspn=0.302811%2C0.126066&text=%D0%AD%D0%BB%D0%B5%D0%B2%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B9%204%D0%90&z=12'
-								frameborder='1'
-								allowfullscreen='true'
-								style={{ position: 'relative' }}
-								className='w-full h-full flex-1'
-							></iframe>
+                            <a href="https://yandex.ru/maps/39/rostov-na-donu/?utm_medium=mapframe&utm_source=maps" className='text-[#eee] text-[12px absolute top-0]'>Ростов‑на‑Дону</a><a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.626780%2C47.250920&mode=whatshere&utm_medium=mapframe&utm_source=maps&whatshere%5Bpoint%5D=39.626780%2C47.250920&whatshere%5Bzoom%5D=14.602394&z=14" className='text-[#eee] text-[12px] absolute top-[14px]'>Квартал Нефтекачка — карта, фото, как добраться, координаты</a>
+
+                            <iframe src="https://yandex.ru/map-widget/v1/?ll=39.626780%2C47.250920&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=39.626780%2C47.250920&whatshere%5Bzoom%5D=14.602394&z=14" frameborder="1" className='relative w-full h-full'></iframe>
 						</div>
 					</div>
 				</div>
