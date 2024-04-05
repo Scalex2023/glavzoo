@@ -7,7 +7,7 @@ function Footer() {
 			<footer className='footer items-center p-4 bg-[#4C67EA] text-neutral-content mt-[220px]'>
 				<aside className='items-center grid-flow-col'>
 					<img src={logo} alt='logo' className='opacity-80' />
-					<p className='ml-5 text-[17px] text-[#ffffff]'>© {new Date().getFullYear()}. Все права защищены.</p>
+					<p className='ml-5 text-[17px] text-[#ffffff]'>© {new Date().getFullYear()}. Всек права защищены.</p>
 					<p className='ml-5 text-[17px] text-[#ffffff]'>© Политика конфиденциальности.</p>
 				</aside>
 			</footer>
