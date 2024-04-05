@@ -8,7 +8,9 @@ function Footer() {
 				<aside className='items-center grid-flow-col'>
 					<img src={logo} alt='logo' className='opacity-80' />
 					<p className='ml-5 text-[17px] text-[#ffffff]'>© {new Date().getFullYear()}. Все права защищены.</p>
-					<p className='ml-5 text-[17px] text-[#ffffff]'href="mailto:info@glavzoo.ru">Политика конфиденциальности.</p>
+					<li className='text-base list-none -ml-4 font-medium text-gray-700'>
+								<a href="mailto:info@glavzoo.ru">Политика конфиденциальности</a>
+							</li>
 					
 				</aside>
 			</footer>
