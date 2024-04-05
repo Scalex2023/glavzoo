@@ -7,10 +7,10 @@ function Footer() {
 			<footer className='footer items-center p-4 bg-[#4C67EA] text-neutral-content mt-[220px]'>
 				<aside className='items-center grid-flow-col'>
 					<img src={logo} alt='logo' className='opacity-80' />
-					<p className='ml-5 text-[17px] text-[#ffffff]'>© {new Date().getFullYear()}. Все права защищены.</p><br>
-					<li className='text-base list-none -ml-4 font-medium text-white-700'>
-								<a href="mailto:info@glavzoo.ru">Политика конфиденциальности</a>
-							</li>
+					<p className='ml-5 text-[17px] text-[#ffffff]'>© {new Date().getFullYear()}. Все права защищены.</p>
+					<p className='ml-5 text-[17px] text-[#ffffff]'>
+					<a href="mailto:info@glavzoo.ru">Политика конфиденциальности</a></p>
+							
 					
 				</aside>
 			</footer>
